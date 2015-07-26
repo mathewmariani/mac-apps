@@ -1,6 +1,6 @@
 # Create temporary directory
-mkdir ~/matty_temp
-cd ~/matty_temp
+mkdir ~/temporary
+cd ~/temporary
 
 # Installing Opera
 curl -L -o Opera.dmg "http://www.opera.com/download/get/?id=37460&amp;location=399&amp;nothanks=yes&amp;sub=marine"
@@ -10,4 +10,4 @@ hdiutil unmount "/Volumes/Opera"
 rm Opera.dmg
 
 # Deleting temporary directory
-rm -r ~/matty_temp
+rm -r ~/temporary

@@ -1,0 +1,3 @@
+# Create temporary directory
+mkdir ~/temporary
+cd ~/temporary

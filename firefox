@@ -1,6 +1,6 @@
 # Create temporary directory
-mkdir ~/matty_temp
-cd ~/matty_temp
+mkdir ~/temporary
+cd ~/temporary
 
 # Installing Firefox
 curl -L -o Firefox.dmg "http://download.mozilla.org/?product=firefox-latest&os=osx&lang=en-US"
@@ -10,4 +10,4 @@ hdiutil unmount "/Volumes/Firefox"
 rm Firefox.dmg
 
 # Deleting temporary directory
-rm -r ~/matty_temp
+rm -r ~/temporary

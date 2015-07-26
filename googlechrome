@@ -1,6 +1,6 @@
 # Create temporary directory
-mkdir ~/matty_temp
-cd ~/matty_temp
+mkdir ~/temporary
+cd ~/temporary
 
 # Installing Chrome
 curl -L -O "https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg"
@@ -10,4 +10,4 @@ hdiutil unmount "/Volumes/Google Chrome"
 rm googlechrome.dmg
 
 # Deleting temporary directory
-rm -r ~/matty_temp
+rm -r ~/temporary

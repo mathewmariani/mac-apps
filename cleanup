@@ -1,0 +1,2 @@
+# Deleting temporary directory
+rm -r ~/temporary
