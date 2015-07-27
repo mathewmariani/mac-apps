@@ -1,0 +1,13 @@
+# Create temporary directory
+mkdir ~/temporary
+cd ~/temporary
+
+# Installing Adobe Brackets
+curl -L -O "https://github.com/adobe/brackets/releases/download/release-1.4%2Beb4/Brackets.1.4.Extract.dmg"
+hdiutil mount -nobrowse Brackets.1.4.Extract.dmg
+cp -R "/Volumes/Brackets Release 1.4/Brackets.app" /Applications
+hdiutil unmount "/Volumes/Brackets Release 1.4"
+rm Brackets.1.4.Extract.dmg
+
+# Deleting temporary directory
+rm -r ~/temporary

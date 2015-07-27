@@ -1,0 +1,13 @@
+# Create temporary directory
+mkdir ~/temporary
+cd ~/temporary
+
+# Installing Steam
+curl -L -O "http://media.steampowered.com/client/installer/steam.dmg"
+yes | hdiutil mount -nobrowse steam.dmg -nobrowse
+cp -R "/Volumes/Steam/Steam.app" /Applications
+hdiutil unmount "/Volumes/Steam"
+rm steam.dmg
+
+# Deleting temporary directory
+rm -r ~/temporary

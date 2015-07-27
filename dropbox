@@ -1,0 +1,13 @@
+# Create temporary directory
+mkdir ~/temporary
+cd ~/temporary
+
+# Installing Dropbox
+curl -L -O "https://www.dropbox.com/download?plat=mac"
+hdiutil mount -nobrowse Dropbox.dmg
+cp -R "/Volumes/Dropbox Installer/Dropbox.app" /Applications
+hdiutil unmount "/Volumes/Dropbox Installer"
+rm Dropbox.dmg
+
+# Deleting temporary directory
+rm -r ~/temporary

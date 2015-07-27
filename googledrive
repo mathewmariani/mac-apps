@@ -1,0 +1,13 @@
+# Create temporary directory
+mkdir ~/temporary
+cd ~/temporary
+
+# Installing Google Drive
+curl -L -O "https://dl-ssl.google.com/drive/installgoogledrive.dmg"
+hdiutil mount -nobrowse installgoogledrive.dmg
+cp -R "/Volumes/Install Google Drive/Google Drive.app" /Applications
+hdiutil unmount "/Volumes/Install Google Drive"
+rm installgoogledrive.dmg
+
+# Deleting temporary directory
+rm -r ~/temporary

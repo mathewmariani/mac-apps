@@ -1,0 +1,12 @@
+# Create temporary directory
+mkdir ~/temporary
+cd ~/temporary
+
+# Installing GitHub
+curl -L -o mac_GitHub.zip "https://central.github.com/mac/latest"
+unzip mac_GitHub.zip
+mv GitHub.app /Applications
+rm mac_GitHub.zip
+
+# Deleting temporary directory
+rm -r ~/temporary

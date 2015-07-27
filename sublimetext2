@@ -1,0 +1,14 @@
+# Create temporary directory
+mkdir ~/temporary
+cd ~/temporary
+
+# Installing Sublime Text 2
+echo "Installing Sublime Text 2"
+curl -L -o "Sublime Text 2.0.2.dmg" "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.2.dmg"
+hdiutil mount -nobrowse "Sublime Text 2.0.2.dmg"
+cp -R "/Volumes/Sublime Text 2/Sublime Text 2.app" /Applications
+hdiutil unmount "/Volumes/Sublime Text 2/Sublime Text 2.app"
+rm "Sublime Text 2.0.2.dmg"
+
+# Deleting temporary directory
+rm -r ~/temporary

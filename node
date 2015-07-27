@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+# Create Temp Directory and CD to it.
+echo `mkdir ~/temporary`;
+cd ~/temporary;
+
+# Look for latest Node verion
+echo `curl -Ls https://nodejs.org/dist/latest/ | grep -o '<a .*href=.*>' | sed -e 's/<a /\<a /g' | sed -e 's/<a .*href=['"'"'"]//' -e 's/["'"'"'].*$//' -e '/^$/ d' > values.txt`;
+
+# Loop through temporary values file, extract filename with .pkg
+for lines in $(cat values.txt); do
+  if [[ $lines == *.pkg* ]]
+  then
+    # Download the appropriate node package for OS X
+    echo `curl -Lo node.pkg https://nodejs.org/dist/latest/{$lines}`;
+  fi
+done
+
+# Cleanup and install NodeJS silently
+echo `rm -rf values.txt | sudo installer -package node.pkg -target /`;
+if [ $? -eq 0 ]; then
+  echo `rm -rf node.pkg ~/temporary`;
+  exit 0;
+else
+  echo "There was an error processing your request.";
+  exit 1;
+fi
+
+# Deleting temporary directory
+rm -r ~/temporary
