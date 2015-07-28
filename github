@@ -3,10 +3,11 @@ mkdir ~/temporary
 cd ~/temporary
 
 # Installing GitHub
-curl -L -o mac_GitHub.zip "https://central.github.com/mac/latest"
-unzip mac_GitHub.zip
+echo "Installing GitHub"
+curl -L -o gitHub.zip "https://central.github.com/mac/latest"
+unzip gitHub.zip
 mv GitHub.app /Applications
-rm mac_GitHub.zip
+rm gitHub.zip
 
 # Deleting temporary directory
 rm -r ~/temporary

@@ -3,6 +3,7 @@ mkdir ~/temporary
 cd ~/temporary
 
 # Installing Google Drive
+echo "Google Drive"
 curl -L -O "https://dl-ssl.google.com/drive/installgoogledrive.dmg"
 hdiutil mount -nobrowse installgoogledrive.dmg
 cp -R "/Volumes/Install Google Drive/Google Drive.app" /Applications

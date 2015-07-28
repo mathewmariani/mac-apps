@@ -3,6 +3,7 @@ mkdir ~/temporary
 cd ~/temporary
 
 # Installing Steam
+echo "Installing Steam"
 curl -L -O "http://media.steampowered.com/client/installer/steam.dmg"
 yes | hdiutil mount -nobrowse steam.dmg -nobrowse
 cp -R "/Volumes/Steam/Steam.app" /Applications
